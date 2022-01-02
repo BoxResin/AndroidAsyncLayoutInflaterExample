@@ -1,0 +1,38 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+// 안드로이드 설정
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId 'kr.boxresin.example.asynclayoutinflater'
+        minSdk 21
+        targetSdk 31
+        versionCode 1
+        versionName '1.0.0'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+// 의존성
+dependencies {
+    // AndroidX
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    implementation 'androidx.asynclayoutinflater:asynclayoutinflater:1.0.0'
+
+    // 머티리얼 디자인
+    implementation 'com.google.android.material:material:1.4.0'
+}
